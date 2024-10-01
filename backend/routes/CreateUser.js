@@ -28,4 +28,19 @@ body('password','Incorrect password').isLength({min:5})
     }
 })
 
+router.post("/loginuser",
+    async (req,res)=>{
+        let email = res.body.email;
+    try {
+        let useremail = await User.findOne({email});
+        if(!useremail){
+            return res.status(400).json({ errors: "Try logging with correct credentials"})
+        }
+        
+    } catch (error) {
+        console.log(error)
+        res.json({success:false});
+    }
+})
+
 module.exports=router;
