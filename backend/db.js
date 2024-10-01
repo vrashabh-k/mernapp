@@ -4,7 +4,7 @@ const mongoURI = 'mongodb+srv://gofood:gofood@gofood.anvmd.mongodb.net/gofooddb?
 
 const mongoDB = async () => {
     try {
-        await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });//useNewUrlParser and useUnifiedTopology are not required
         console.log("Connected to MongoDB");
 
         const fetched_data = await mongoose.connection.db.collection("food_items").find({}).toArray();
