@@ -3,6 +3,7 @@ const router=express.Router()
 const User=require('../models/User')
 const { body, validationResult } = require('express-validator');
 
+//For signup
 router.post("/creatuser",
     [
 body('email').isEmail(),
@@ -28,6 +29,7 @@ body('password','Incorrect password').isLength({min:5})
     }
 })
 
+//For login
 router.post("/loginuser",
     [
 body('email').isEmail(),

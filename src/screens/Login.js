@@ -30,7 +30,7 @@ export default function Login() {
       alert("Enter Valid credentials")
     }
     if (temp.success) {
-      navigate('/')
+      navigate('/') //Will navigate to home after successful login
     }
   };
   const onChange = (event) => {
