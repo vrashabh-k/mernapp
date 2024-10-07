@@ -3,6 +3,8 @@ const router=express.Router()
 const User=require('../models/User')
 const { body, validationResult } = require('express-validator');
 
+const bcrypt= require("bcryptjs");
+
 //For signup
 router.post("/creatuser",
     [
@@ -15,12 +17,14 @@ body('password','Incorrect password').isLength({min:5})
         if(!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array()})
         }
+        const salt= await bcrypt.genSalt(10);
+        let secPassword= await bcrypt.hash(req.body.password,salt)
 
     try {
         await User.create({
             name:req.body.name,
             email:req.body.email,
-            password:req.body.password,
+            password:secPassword,
             location:req.body.location
         }).then(res.json({success:true}))   
     } catch (error) {
