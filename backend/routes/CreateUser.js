@@ -4,6 +4,8 @@ const User=require('../models/User')
 const { body, validationResult } = require('express-validator');
 
 const bcrypt= require("bcryptjs");
+const jwt= require("jsonwebtoken");
+const jwtSecret= "Something is going on here";
 
 //For signup
 router.post("/creatuser",
@@ -46,14 +48,22 @@ body('password','Incorrect password').isLength({min:5})
         }
         let email = req.body.email;
     try {
-        let userdata = await User.findOne({email});
-        if(!userdata){
+        let userData = await User.findOne({email});
+        if(!userData){
             return res.status(400).json({ errors: "Try logging with correct credentials"})
         }
-        if(req.body.password!==userdata.password){
+        const pswdCompare=await bcrypt.compare(req.body.password,userData.password)
+        if(!pswdCompare){
             return res.status(400).json({ errors: "Try logging with correct credentials"})
         }
-        return res.json({success:'true'})
+        
+        const data={
+            user:{
+                id:userData.id
+            }
+        }
+        const authToken= jwt.sign(data,jwtSecret)
+        return res.json({success:'true',authToken:authToken})
     } catch (error) {
         console.log(error)
         res.json({success:false});
