@@ -7,7 +7,7 @@ let priceOptions= Object.keys(options);
   return (
     <div>
       <div className="card m-3" style={{ width: "18rem", maxHeight: "360px" }}>
-        <img src={props.imgSrc} className="card-img-top" alt="..." />
+        <img src={props.imgSrc} className="card-img-top" alt="..." style={{height:"120px", objectFit:"fill"}}/>
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
           <p className="card-text">Its a food card</p>
