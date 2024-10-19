@@ -10,9 +10,11 @@ import {
 } from "react-router-dom";
 import Login from './screens/Login';
 import Signup from './screens/Signup.js';
+import { CardProvider } from './components/ContextReducer.js';
 
 function App() {
   return (
+    <CardProvider>
     <Router>
       <div>
         <Routes>
@@ -22,6 +24,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </CardProvider>
   );
 }
 
