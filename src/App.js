@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Login from './screens/Login';
 import Signup from './screens/Signup.js';
+import MyOrder from './screens/MyOrder.js';
 import { CardProvider } from './components/ContextReducer.js';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/creatuser" element={<Signup/>}/>
+          <Route exact path="/myOrder" element={<MyOrder/>}/>
         </Routes>
       </div>
     </Router>

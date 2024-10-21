@@ -1,0 +1,7 @@
+/* Custom row hover effect */
+.table-hover tbody tr:hover {
+    background-color: #7f8f9f; /* Change this to any color you like */
+    color: white; /* Optional: keep the text color readable */
+  }
+  
+  
