@@ -30,7 +30,8 @@ export default function Login() {
       alert("Enter Valid credentials")
     }
     if (temp.success) {
-      localStorage.setItem("authToken",temp.authToken)
+      localStorage.setItem("userEmail", credentials.email);
+      localStorage.setItem("authToken",temp.authToken);
       console.log(localStorage.getItem("authToken"))
       navigate('/') //Will navigate to home after successful login
     }

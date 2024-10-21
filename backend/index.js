@@ -20,7 +20,8 @@ app.get('/', (req, res) => {
 
 app.use(express.json())
 app.use('/api',require('./routes/CreateUser'));
-app.use('/api',require('./routes/DisplayData'));// it is showing error for this line
+app.use('/api',require('./routes/DisplayData'));
+app.use('/api',require('./routes/OrderData'));// it is showing error for this line
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
