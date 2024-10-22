@@ -1,4 +1,6 @@
 import {React,useState} from 'react'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -41,7 +43,8 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div id='Login'>
+      <div><Navbar/></div>
       <div className="container mt-3">
           <form onSubmit={handleSubmit}>
 
@@ -84,6 +87,7 @@ export default function Login() {
 
           </form>
         </div>
+        <div><Footer className="login-page-footer"></Footer></div>
     </div>
   )
 }

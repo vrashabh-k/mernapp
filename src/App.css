@@ -4,4 +4,238 @@
     color: white; /* Optional: keep the text color readable */
   }
   
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #343a40;
+  padding: 1rem;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107;
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  max-height: 60vh;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+  object-fit: cover;
+  height: 60vh;
+  transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px; /* Place it at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* Search Bar */
+.form-control {
+  border-radius: 20px;
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  max-width: 500px; /* To limit the width on larger screens */
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-color: #ffc107;
+}
+
+/* Category Heading */
+.fs-3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 1rem;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem;
+  text-align: center;
+  padding: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Food Category Rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.col-12, .col-md-6, .col-lg-3 {
+  flex: 1;
+  min-width: 280px;
+  max-width: 25%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .col-md-6, .col-lg-3 {
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-6, .col-lg-3 {
+      max-width: 100%;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .carousel {
+      height: 40vh;
+  }
+
+  .carousel img {
+      height: 40vh;
+  }
+
+  .fs-3 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+      height: 30vh;
+  }
+
+  .carousel img {
+      height: 30vh;
+  }
+
+  .fs-3 {
+      font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel {
+      height: 20vh;
+  }
+
+  .carousel img {
+      height: 20vh;
+  }
+
+  .fs-3 {
+      font-size: 1.2rem;
+  }
+
+  .form-control {
+      width: 90%;
+  }
+}
+
+/* Login page */
+#Login{
+  background-color: #c3cddb;
   
+
+  /* min-Height: 100vh; */
+}
+/* CSS for footer fixed to bottom */
+.login-page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}

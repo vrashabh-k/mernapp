@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-warning">
+    <div style={{ backgroundColor: '#c3cddb', minHeight: '100vh' }}>
       <div>
         <Navbar />
       </div>
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           <div className="carousel-item active">
             <img
-              src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg"
+              src="/images/pizza1.jpg"
               className="d-block w-100"
               style={{filter:"brightness(30%)"}}
               alt="..."
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="carousel-item">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjOlwY5eBuou4tAQi3lOkMb54TWVl4EOdP5w2IHlApdz_eSIjzPQV5pAVdzBz1Ewv5c90&usqp=CAU"
+              src="/images/biriyani1.jpg"
               className="d-block w-100"
               style={{filter:"brightness(30%)"}}
               alt="..."
@@ -61,7 +61,15 @@ export default function Home() {
           </div>
           <div className="carousel-item">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDQ9mjhWOF_Klm286mo34p3YdBHxDPQO29QVSbyl-al5RmOZJBYlGqGOxnr_9r9ixCRO8&usqp=CAU"
+              src="/images/pizza2.jpg"
+              className="d-block w-100"
+              style={{filter:"brightness(30%)"}}
+              alt="..."
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="/images/friedrice1.jpg"
               className="d-block w-100"
               style={{filter:"brightness(30%)"}}
               alt="..."
