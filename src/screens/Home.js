@@ -23,11 +23,11 @@ export default function Home() {
     loadData();
   }, []);
 
-  return (
-    <div style={{ backgroundColor: '#c3cddb', minHeight: '100vh' }}>
-      <div>
+  return (<div className="page-container d-flex flex-column" style={{ minHeight: '100vh' }}>
+      <header>
         <Navbar />
-      </div>
+      </header>
+    <main className="flex-grow-1" style={{ backgroundColor: '#c3cddb' }}>
       <div>
       <div
         id="carouselExampleFade"
@@ -132,9 +132,12 @@ export default function Home() {
           <div>********</div>
         )}
       </div>
-      <div>
-        <Footer />
-      </div>
+      
+    </main>
+
+    <Footer />
+      
+      
     </div>
   );
 }

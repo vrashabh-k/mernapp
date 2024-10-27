@@ -239,3 +239,20 @@ footer a {
   padding: 10px;
   text-align: center;
 }
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main{
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #343a40; /* Adjust color as needed */
+  color: #adb5bd;
+  width: 100%;
+  padding: 1rem 0; /* Adjust padding for content spacing */
+  margin: 0 !important; /* Ensure no margin around footer */
+}
