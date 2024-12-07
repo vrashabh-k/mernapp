@@ -37,5 +37,13 @@ GoFood is a full-stack food delivery web application designed to provide users w
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/vrashabh-k/gofood.git
+   git clone https://github.com/vrashabh-k/mernapp.git
    cd gofood
+2. **Install dependencies both in frontend and backend**:
+   ```bash
+   npm install
+3. **Run the folder**
+   ```bash
+   npm start //For frontend
+   nodemon   //For backend
+  
