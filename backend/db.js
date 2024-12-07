@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-const mongoURI = 'mongodb+srv://gofood:gofood@gofood.anvmd.mongodb.net/gofooddb?retryWrites=true&w=majority&appName=gofood';
+require('dotenv').config(); // Load environment variables from .env
+
+const mongoURI = process.env.MONGO_URI;
+
 
 const mongoDB = async () => {
     try {
@@ -31,8 +34,7 @@ module.exports = mongoDB;
 // const mongoose = require('mongoose');
 // mongoose.set('strictQuery', false);
 
-// const mongoURI = 'mongodb+srv://gofood:gofood@gofood.anvmd.mongodb.net/gofooddb?retryWrites=true&w=majority&appName=gofood';
-
+// const mongoURI = 
 // const mongoDB = async () => {
 //     try {
 //         await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
