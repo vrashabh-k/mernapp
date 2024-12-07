@@ -22,7 +22,7 @@ GoFood is a full-stack food delivery web application designed to provide users w
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
-- **Payment Gateway**: [Specify the payment gateway used, e.g., Razorpay, Stripe]
+- **Payment Gateway**: Razorpay*
 
 ---
 
@@ -37,5 +37,5 @@ GoFood is a full-stack food delivery web application designed to provide users w
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<your-username>/gofood.git
+   git clone https://github.com/vrashabh-k/gofood.git
    cd gofood
